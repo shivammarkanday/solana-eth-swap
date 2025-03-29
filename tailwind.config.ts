@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Blockchain specific colors
+				solana: {
+					DEFAULT: '#9b87f5', // Purple
+					light: '#E5DEFF',
+					dark: '#7E69AB',
+					green: '#F2FCE2',
+				},
+				ethereum: {
+					DEFAULT: '#1EAEDB', // Blue
+					light: '#33C3F0',
+					dark: '#222222',
+					gray: '#8A898C',
 				}
+			},
+			fontFamily: {
+				sans: ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +101,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'network-switch': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'network-switch': 'network-switch 0.4s ease-out'
+			},
+			backgroundImage: {
+				'gradient-wallet': 'linear-gradient(135deg, #9b87f5 0%, #1EAEDB 100%)',
 			}
 		}
 	},
